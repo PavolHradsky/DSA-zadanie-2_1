@@ -1,0 +1,3 @@
+C:/Users/hrads/Documents/Programming/dsaZadanie2_2/cmake-build-debug/CMakeFiles/dsaZadanie2_2.dir
+C:/Users/hrads/Documents/Programming/dsaZadanie2_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/hrads/Documents/Programming/dsaZadanie2_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
