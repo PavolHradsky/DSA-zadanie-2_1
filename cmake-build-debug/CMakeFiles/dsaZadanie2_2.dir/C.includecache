@@ -9,8 +9,8 @@
 C:/Users/hrads/Documents/Programming/dsaZadanie2_2/main.c
 stdio.h
 -
-string.h
--
 stdlib.h
+-
+time.h
 -
 

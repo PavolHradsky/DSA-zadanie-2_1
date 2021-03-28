@@ -20,11 +20,6 @@ NODE table[SIZE];
 
 unsigned int hash(unsigned int num) {
     unsigned int h = 0;
-//    for (int i = 0; i < strlen(str); ++i) {
-//        h = 31 * h + str[i];
-//    }
-//    return h % SIZE;
-
     do {
         h = 31 * h + (num%10);
         num /= 10;
@@ -60,13 +55,18 @@ void insert(unsigned int num) {
 
 }
 
-void search(unsigned int num) {
+NODE * search(unsigned int num) {
     unsigned int index = hash(num);
     NODE *tmp = table[index].next;
     while (num != tmp->data) {
+        if(tmp->next == NULL) {
+            //printf("Prvok nebol najdeny\n");
+            return NULL;
+        }
         tmp = tmp->next;
     }
-    //printf("Finded %d with key %d\n", tmp->data, tmp->key);
+    //printf("Najdeny prvok %d s indexom %d\n", tmp->data, tmp->key);
+    return tmp;
 }
 
 void print_table() {
@@ -106,6 +106,7 @@ int main(void) {
     cpu_time_used = ((double) (end - start));   //vyrata cas
     printf("finding %d times in tree size %d\n", toFind, max);      //vypise vysledok
     printf("Time: %dms\n", (int) cpu_time_used);
+
 
     return 0;
 }
